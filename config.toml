@@ -93,7 +93,7 @@
 [[aggregators.basicstats]]
   ## General Aggregator Arguments:
   ## The period on which to flush & clear the aggregator.
-  period = "30m"
+  period = "1h"
   ## If true, the original metric will be dropped by the
   ## aggregator and will not get sent to the output plugins.
   drop_original = true
