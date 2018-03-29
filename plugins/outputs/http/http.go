@@ -41,7 +41,7 @@ type Request struct {
 
 func (r *RequestData) Append(metric telegraf.Metric) {
 	item := &Metric{
-		Timestamp:   metric.UnixNano() / 1000000000, // to seconds
+		Timestamp:   metric.Time().UnixNano() / 1000000000, // to seconds
 		Measurement: metric.Name(),
 		Tags:        metric.Tags(),
 		Fields:      metric.Fields(),
